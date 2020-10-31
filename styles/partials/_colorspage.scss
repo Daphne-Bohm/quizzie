@@ -1,0 +1,92 @@
+.colorspage{
+    @include flex(column);
+    height: 80vh;
+    margin: auto;
+    .colorspage-text{
+        text-align: center;
+        width: 80%;
+        overflow: hidden;
+        .choose-color-title{
+            font-size: 1.7rem;
+            opacity: 0;
+            transform: translateX(-100%);
+            animation: showTitle 2s ease-out forwards;
+        }
+        .choose-color-subtitle{
+            font-size: 1.2rem;
+            opacity: 0;
+            transform: translateX(100%);
+            animation: showSubTitle 2s linear 2s forwards;
+        }
+    }
+    .colorspage-colors{
+        @include flex(row);
+        flex-wrap: wrap;
+        width: 80%;
+        margin: 20px auto;
+        .colors{
+            width: 100px;
+            height: 70px;
+            border: 3px solid $black-color;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px;
+        }
+        .blue{
+            background-color: $blue;  
+        }
+        .green{
+            background-color: $green;
+        }
+        .yellow{
+            background-color: $yellow;
+        }
+        .red{
+            background-color: $red;
+        }
+        .orange{
+            background-color: $orange;
+        }
+        .pink{
+            background-color: $pink;
+        }
+    }
+}
+
+// Keyframes
+@keyframes showTitle{
+    from { 
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to { 
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
+@keyframes showSubTitle{
+    from { 
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to { 
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
+
+// Media
+@media (min-width: 768px) { 
+    .colorspage{
+        .colorspage-text{
+            h1{
+                font-size: 3rem;
+            }
+            h2{
+                font-size: 2rem;
+            }
+        }
+    }
+}

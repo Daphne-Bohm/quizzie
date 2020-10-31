@@ -1,0 +1,77 @@
+.login{
+    width: 80%;
+    margin: auto;
+    margin-top: 20vh;
+    @include flex(column);
+    .login-text{
+        background-color: $black-color;
+        width: 100%;
+        text-align: center;
+        padding: 20px 0;
+        h2{
+            color: white;
+            font-size: 1.5rem;
+        }
+    }
+    form{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        .form-input-login{
+            display: flex;
+            padding: 30px;
+            flex-direction: column;
+            background-color: white;
+            border: 3px $black-color solid;
+            label{
+                margin: 3px 0;
+            }
+        }
+        .btn-submit{
+            margin-top: 30px;
+            width: 100%;
+        }
+    }
+}
+
+.new-user{
+    text-align: center;
+    width: 80%;
+    margin: 30px auto;
+    a{
+        color: $black-color;
+        text-decoration: underline;
+    }
+}
+
+// MEDIA QUERIES
+@media (min-width: 768px) { 
+    .login{
+        width: 60%;
+        .login-text{
+            h2{
+                font-size: 2rem;
+            }
+        }
+        form{
+            .form-input-login{
+                padding: 50px;
+            }
+            .btn-submit{
+                font-size: 24px;
+            }
+        }
+    }
+}
+
+@media (min-width: 991.98px) { 
+    .login{
+        width: 40%;
+    }
+}
+
+@media (min-width: 1200px) { 
+    .login{
+        width: 25%;
+    }
+}

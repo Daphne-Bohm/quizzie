@@ -1,0 +1,41 @@
+// CATEGORIES
+.container-categories{
+    margin-top: 25vh;
+    .categories{
+        @include flex(row);
+        flex-wrap: wrap;
+        .category{
+            @include flex(row);
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 3px $black-color solid;
+            margin: 10px;
+            cursor: pointer;
+            transition: all 0.5s ease;
+            &:hover{
+                transform: scale(1.1);
+            }
+            img{
+                width: 35px;
+                pointer-events: none;
+            } 
+        }
+    }
+}
+
+////////MEDIA
+@media (min-width: 768px) { 
+    .container-categories{
+        margin-top: 30vh;
+        .categories{
+            .category{
+                width: 100px;
+                height: 100px;
+                img{
+                    width: 50px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,109 @@
+// INTRO
+.homepage-content{
+    @include flex(column);
+    margin-top: 25vh;
+    h1{
+        font-size: 3.5rem;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+    }
+    .start-btn{
+        margin-bottom: 42vh;
+    }
+    .container-img-homepage{
+        position: relative;
+        width: 80%;
+        height: 10%;
+        .img-quiz{
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+        
+        }
+    }
+}
+
+// INFO
+.info-quizzie{
+    @include flex(column);
+    height: 100vh;
+    margin: auto;
+    width: 80%;
+    #extra-overlay{
+        width: 50%;
+        height: 100vh;
+        opacity: .20;
+        position: absolute;
+        top: 100vh;
+        left: auto;
+        right: 0;
+        z-index: -1;
+    }
+    h2{
+        margin-bottom: 30px;
+    }
+    .start-btn{
+        margin: 20px 0;
+    }
+    .go-to-top{
+        border: 3px solid $black-color;
+        padding: 10px;
+        border-radius: 5px;
+        background-color: white;
+        color: $black-color;
+        margin-top: 20px;
+        font-size: 18px;
+        transition: all 0.5s ease;
+        &:hover{
+            background-color: $black-color;
+            color: white;
+        }
+    }
+}
+
+.hide{
+    display: none;
+}
+
+// MEDIA QUERIES
+@media (min-width: 768px) { 
+    .homepage-content{
+        .container-img-homepage{
+            width: 50%;
+            height: auto;
+        }   
+    }
+    .info-quizzie{
+        width: 60%;
+        h2{
+            margin-bottom: 30px;
+            font-size: 3rem;
+        }
+        p{
+            font-size: 24px;
+        }
+        .start-btn{
+            margin: 20px 0;
+        }
+    }
+}
+
+@media (min-width: 991.98px) { 
+    .homepage-content{
+        .container-img-homepage{
+            width: 30%;
+            height: auto;
+        }    
+    }
+    .info-quizzie{
+        width: 40%;
+        h2{
+            margin-bottom: 30px;
+        }
+        .start-btn{
+            margin: 20px 0;
+        }
+    }
+}
+
+

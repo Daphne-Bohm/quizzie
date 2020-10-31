@@ -1,0 +1,33 @@
+.display-score-container{
+    margin: auto;
+    width: 80%;
+    .wrong-correct-answer{
+        margin-top: 25vh;
+        padding: 50px 10px;
+        text-align: center;
+        margin-bottom: 20px;
+        border: 3px solid $black-color;
+        border-radius: 5px;
+    }
+    a{
+        display: block;
+        margin: auto;
+        border-radius: 5px;
+        color: $black-color;
+        text-align: center;
+        border: 3px solid $black-color;
+        background-color: white;
+    }
+}
+
+@media (min-width: 768px) { 
+    .display-score-container{
+        width: 50%;
+    }  
+}
+
+@media (min-width: 1200px) { 
+    .display-score-container{
+        width: 30%;
+    } 
+}

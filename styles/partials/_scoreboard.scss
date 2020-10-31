@@ -1,0 +1,64 @@
+.message-please-login{
+    text-align: center;
+    margin-top: 250px;
+}
+
+.scoreboard{
+    @include flex(column);
+    margin-top: 50px;
+    h1{
+        margin-bottom: 20px;
+    }
+    .scores{
+        @include flex(column);
+        .score{
+            text-align: center;
+            .score-img{
+                border-radius: 50%;
+                border: 3px $black-color solid;
+                width: 80px;
+                height: 80px;
+                @include flex(row);
+                margin: 10px;
+                img{
+                    width: 35px;
+                }
+            }
+            p{
+                font-weight: bold;
+            }
+        }
+    }
+    .btn-logout{
+        margin: 30px 0;
+    }
+}
+
+
+// Media
+@media (min-width: 768px) { 
+    .scoreboard{
+        @include flex(column);
+        margin-top: 250px;
+        h1{
+            font-size: 2.5rem;
+        }
+        .scores{
+            @include flex(row);
+            .score{
+                .score-img{
+                    width: 100px;
+                    height: 100px;
+                    @include flex(row);
+                    margin: 10px;
+                    img{
+                        width: 50px;
+                    }
+                }
+            }
+        }
+        .btn-logout{
+            margin: 80px 0;
+        }
+    }
+}

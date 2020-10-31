@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+$poppins: 'Poppins', sans-serif;
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: $poppins; 
+    position: relative;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+input{
+    padding: 5px;
+}
+
+.overlay{
+    width: 50%;
+    height: 100vh;
+    opacity: .20;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+button{
+    outline: none;
+    border: 3px solid $black-color;
+    width: 80px;
+    height: 40px;
+    font-size: 16px;
+    font-family: $poppins; 
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: white;
+    transition: all .5s ease;
+    &:hover{
+        background-color: $black-color;
+        color: white;
+    }
+}
+
+#general{
+    background-color: $blue;
+}
+
+#music{
+    background-color: $red;
+}
+
+#math{
+    background-color: $orange;
+}
+
+#history{
+    background-color: $pink;
+}
+
+#animals{
+    background-color: $green;
+}
+
+// MEDIA QUERIES
+@media (min-width: 768px) { 
+    button{
+        width: 188px;
+        height: 55px;
+        font-size: 30px;
+    }
+}

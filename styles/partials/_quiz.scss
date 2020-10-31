@@ -1,0 +1,105 @@
+// NOT CORRECT OR CORRECT MESSAGE
+.not-correct{
+    width: 100%;
+    color: white;
+    background-color: $red;
+    text-align: center;
+    padding: 10px;
+    display: none;
+}
+
+.correct{
+    width: 100%;
+    color: white;
+    background-color: $green;
+    text-align: center;
+    padding: 10px;
+    display: none;
+}
+
+
+// QUIZ
+.container-quiz{
+  width: 80%;
+  margin: auto;
+    .question{
+        text-align: center;
+        margin-top: 10vh;
+        border: 3px solid $black-color;
+        border-radius: 5px;
+        padding: 20px;
+        img{
+            display: block;
+            margin: auto;
+        }
+        p{
+            margin-top: 20px;
+        }
+    }
+    .answers{
+        margin-top: 30px;
+        text-align: center;
+        li{
+            width: 100%;
+            padding: 5px;
+            margin: 20px 0;
+            border-radius: 5px;
+            cursor: pointer;
+            border: 3px solid $black-color;
+            background-color: white;
+            transition: all 0.5s ease;
+            &:hover{
+                background-color: $black-color;
+                color: white;
+            }
+        }
+    }
+    .button-quiz{
+        @include flex(row);
+        margin-top: 30px;
+        .stop-btn{
+            width: 100%;
+            display: block;
+            margin: auto;
+            background-color: $black-color;
+            color: white;
+            cursor: pointer;
+            &:hover{
+                color: $black-color;
+                background-color: white;
+            }
+        }
+    }
+ 
+}
+
+// FOR JS
+.show{
+    display: block;
+}
+
+////////MEDIA
+@media (min-width: 768px) { 
+ 
+    // QUIZ
+    .container-quiz{
+        width: 50%;
+        font-size: 1.2rem;
+        .button-quiz{
+            .stop-btn{
+                font-size: 1.2rem;
+            }
+        }
+    }
+}
+
+@media (min-width: 1200px) { 
+    // QUIZ
+    .container-quiz{
+        .question{
+            margin-top: 20vh;
+        }
+        width: 30%;
+        font-size: 1.2rem;
+    }
+}

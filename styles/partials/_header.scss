@@ -1,0 +1,32 @@
+header{
+    background-color: $black-color;
+    padding: 1.2rem 0;
+    .logo-container{
+        display: flex;
+        justify-content: flex-start;
+        margin-left: 5px;
+        h1{
+            color: white;
+            font-size: 1.5rem;
+        }
+        svg{
+            margin-top: -30px;
+            width: 30px;
+            height: auto;
+        }
+    }
+    .navlinks{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin-top: -35px;
+        svg{
+            width: 30px;
+            height: auto;
+        }
+        .navlink{
+            margin: 0 5px;
+            color: white;
+        }
+    }
+}
