@@ -9,7 +9,7 @@ I also wanted to learn how to make a login and register form with php. And I wan
 
 ## Where can you find the quiz?
 
-You can find the quiz on: https://quizzie-app.herokuapp.com/.
+The project has been deployed on Heroku and can be viewed here: https://quizzie-app.herokuapp.com/.
 
 ## How does the quiz work?
 
