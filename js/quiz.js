@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
         question.innerHTML = data.results[0].question;
         
         let possibleAnswers = [data.results[0].incorrect_answers, data.results[0].correct_answer];
-        let flattenAnswers = possibleAnswers.reduce((acc, val) => acc.concat(val), []);
+        let flattenAnswers = possibleAnswers.flat();
         
         flattenAnswers.sort(() => Math.random() - 0.5);
         
